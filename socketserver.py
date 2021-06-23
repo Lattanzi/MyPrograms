@@ -1,7 +1,7 @@
 import socket
 import subprocess
 
-credentials = ["root:latta","admin:admin2021"]
+credentials = ["root:test","admin:admintest"]
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_address = ('127.0.0.1', 333)
 sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
