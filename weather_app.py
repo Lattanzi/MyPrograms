@@ -107,8 +107,8 @@ def showPrev(lat, long):
             dailyForecasts = get5DailyForecasts(local['codigoLocal'])
             for day in dailyForecasts:
                 print('\n',day['dia'])
-                print('Mínima: ' + str(day['min']) + "\xb0" + 'C')
-                print('Máxima: ' + str(day['max']) + "\xb0" + 'C')
+                print('Mínima: ' + str(round(((day['min']-32)/1.800),1)) + "\xb0" + 'C')
+                print('Máxima: ' + str(round(((day['max']-32)/1.800),1)) + "\xb0" + 'C')
                 print('Clima: ' + day['clima'])
                 print('________________________')
         except:
@@ -144,7 +144,7 @@ try:
         keep = input('\n Deseja buscar a previsão de outro local(S/N)?').lower()
         if keep != 's':
             break
-        local = input("Entre com a cidade e o estado(Ex: cidade, estado ).")
+        local = input("Entre com a cidade e o estado(Ex: cidade, estado ):")
         try:
             coordenadas = localSearch(local)
             showPrev(coordenadas['lat'], coordenadas['long'])
