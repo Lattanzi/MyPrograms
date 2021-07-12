@@ -1,0 +1,11 @@
+Project Simple MOOC
+
+- virtualenv venv -p py #criando ambiente virtual
+
+- .\activate #ativando o venv na pasta scripts
+
+- pip install django
+
+- django-admin.py startproject simplemooc
+
+- https://docs.djangoproject.com/en/3.2/ref/django-admin/
